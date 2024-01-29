@@ -20,9 +20,6 @@ RUN apt-get install -y \
 
 RUN apt-get install -y flex bison
 
-# RUN wget https://github.com/westes/flex/files/981163/flex-2.6.4.tar.gz && \
-#     tar -xzf flex-2.6.4.tar.gz
-
 RUN wget https://download.librdf.org/source/raptor2-2.0.16.tar.gz && \
     tar -xzf raptor2-2.0.16.tar.gz
 
@@ -33,12 +30,6 @@ RUN ./autogen.sh
 RUN ./configure
 RUN make
 RUN make install
-
-# WORKDIR /flex-2.6.4
-# RUN ./autogen.sh
-# RUN ./configure
-# RUN make
-# RUN make install
 
 WORKDIR /rasqal-0.9.33
 RUN ls -la
